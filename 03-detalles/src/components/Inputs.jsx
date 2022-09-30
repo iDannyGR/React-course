@@ -10,7 +10,7 @@ const Inputs = () => {
   const {handleChange, sum, res, mul, div, numero1, numero2} = Operators(numeros, setNumeros)
    return (
     <Fragment>
-      <label>
+      <label className='mx-2'>
           Numero 1 = <input className='form-control' name='numero1' value={numero1} onChange={handleChange} type="number" />
       </label>
       <label>

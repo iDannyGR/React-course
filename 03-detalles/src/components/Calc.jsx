@@ -1,6 +1,6 @@
 import React from 'react';
 import Inputs from './Inputs';
-import './Inputs.css';
+
 
 
 const Calc = () => {
