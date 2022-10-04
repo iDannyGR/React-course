@@ -1,12 +1,16 @@
 import React from 'react'
-import Effects from './components/Effects'
+//import Memorize from './components/Memorize'
+//import Layout from './components/Layout'
+//import Effects from './components/Effects'
 // import Calc from './components/Calc'
 // import State from './components/State'
+//import Ref from './components/Ref'
+import Custom from './components/Custom';
 
 const App = () => {
   return (
-    <div className='container'>
-         <Effects />
+    <div className='container center'>
+    <Custom />
     </div>
  
     // <div className='container text-center'>
