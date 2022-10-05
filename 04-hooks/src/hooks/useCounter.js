@@ -1,7 +1,9 @@
-import React from 'react'
+import {useState} from 'react'
 
-export default useCounter = () => {
-    const [counter, setCounter] = useState(5);
-    const increment = () => { setCounter(counter + 1 )};
-    const decrement = () => { setCounter(counter - 1 )};
- }
+export const useCounter = (initialValue, range = 1) => {
+    const [counter, setCounter] = useState(initialValue);
+    const increment = () => { setCounter(counter + range) };
+    const decrement = () => { setCounter(counter - range) };
+
+    return [counter, increment, decrement]
+};

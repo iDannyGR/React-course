@@ -1,7 +1,9 @@
-import React,{useState} from 'react'
+import {useCounter} from "../hooks/useCounter"
+
 
 const Custom = () => {
-    
+  const [counter, increment, decrement] = useCounter(10,5);
+
   return (
       <>
           <h1>custom hook: {counter}</h1>
