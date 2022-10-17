@@ -12,9 +12,17 @@ const Cards = () => {
         petition();
         
         }, []);
-    
+    const [input, setInput] = useState("");
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(e.target[0].value)
+    }    
   return (
       <>
+          <form onSubmit={handleSubmit}>
+              <label> Buscar: <input type="text" name='inputText' /></label>{''}
+          </form>
+          <hr />
           {
               images.map((img) => { return <Card key={ img.id } img={img.urls.regular} /> })}
           
