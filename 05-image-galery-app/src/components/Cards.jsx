@@ -15,7 +15,8 @@ const Cards = () => {
     const [input, setInput] = useState("");
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.target[0].value)
+        const text = e.target[0].value; 
+        setInput(text);
     }    
   return (
       <>
