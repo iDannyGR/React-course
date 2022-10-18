@@ -1,10 +1,13 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from './Card';
 
 const Cards = () => {
     const [images, setImages] = useState([]);
+    const [input, setInput] = useState("");
     const petition = async () => {
-        const res = await fetch('https://api.unsplash.com/photos?client_id=TUBqWb2LqAFh7QZ7_JR0XMT90rMcT4FSoBKoIDh5aso')
+        const Key = 'client_id=TUBqWb2LqAFh7QZ7_JR0XMT90rMcT4FSoBKoIDh5aso'
+        const endPoint =`https://api.unsplash.com/photos?${input}&${Key}`;
+        const res = await fetch(endPoint)
         const data = await res.json();
         setImages(data);
     }
@@ -12,7 +15,7 @@ const Cards = () => {
         petition();
         
         }, []);
-    const [input, setInput] = useState("");
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         const text = e.target[0].value; 
