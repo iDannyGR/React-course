@@ -3,7 +3,7 @@ import Container from './components/Container';
 const App = () => {
   return (
     <div className='center'>
-      <h1>Galery App</h1>
+      <h1 className='center'>Galery App</h1>
       <hr />
       <Container />
     </div>
