@@ -1,10 +1,11 @@
 import React from 'react'
 import Container from './components/Container';
+import Header from './components/Header';
+
 const App = () => {
   return (
     <div className='center'>
-      <h1 className='center'>Galery App</h1>
-      <hr />
+      <Header />
       <Container />
     </div>
   )

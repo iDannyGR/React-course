@@ -27,8 +27,9 @@ const Cards = () => {
     }    
   return (
       <>
-          <form onSubmit={handleSubmit}>
-              <label className='p-3'> Buscar: <input type="text" name='inputText' /></label>{''}
+          <form  className ='align-center' onSubmit={handleSubmit}>
+              <label className='w-75'> Buscar: <input type="text" className='w-100' name='inputText' /></label>{''}
+              <button type='submit' className='btn btn-outline-dark mx-2'> Search <i className="bi bi-search"></i></button>
           </form>
           <hr />
           <div className='row'>
