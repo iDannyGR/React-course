@@ -7,7 +7,7 @@ const Card = ({ img }) => {
       width: "18rem",
       height: "20rem",
     }}>
-          <img src={img} className="card-img-top" alt="imagen png" />   
+          <img src={img} className="img-fluid h-100" alt="imagen png" />   
           </div> 
   )
 }

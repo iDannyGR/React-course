@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Card from './Card';
+import Loading from './Loading';
 
 const Cards = () => {
     const [images, setImages] = useState([]);
@@ -26,19 +27,20 @@ const Cards = () => {
         setInput(text);
     }    
   return (
-      <>
+      <div className='text-center'>
           <form  className ='align-center' onSubmit={handleSubmit}>
               <label className='w-75'> Buscar: <input type="text" className='w-100' name='inputText' /></label>{''}
               <button type='submit' className='btn btn-outline-dark mx-2'> Search <i className="bi bi-search"></i></button>
           </form>
           <hr />
+          <Loading />
           <div className='row'>
               {images.map((img) => {
                   return <div  key={ img.id } className='col'>
                     <Card  img={img.urls.regular} />
             </div> })}
           </div>
-          </>
+          </div>
   )
 }
 

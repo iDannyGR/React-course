@@ -3,7 +3,7 @@ import Cards from './Cards'
 
 const container = () => {
   return (
-      <div className='container border'>
+      <div className='container border my-3'>
           <Cards />
     </div>
   )
