@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-      <nav className='navbar navbar-dark bg-dark'>
+          <nav className='navbar navbar-dark bg-dark'>
           <div className='container-fluid'>
           <h1 className='navbar-brand'>Agenda en React + Reducer</h1>
           </div>
