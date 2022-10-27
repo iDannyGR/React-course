@@ -14,7 +14,7 @@ const TableContacts = ({ contacts=[] }) => {
           <tbody>
               {contacts.map((contact) => {
                    return <tr key={contact.id}>
-                      <th>{contact.id}</th>
+                     <th>{contact.id.split('-')[0]}</th>
                       <td>{contact.name}</td>
                       <td>{contact.number}</td>
                       <td>
