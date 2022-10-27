@@ -44,7 +44,10 @@ const FormAdd = ({ dispatch }) => {
                         autoComplete='off' />
           </label>
           <div className='mx-1 d-grid gap-2'>
-              <button  onClick={handleAdd} className='btn btn-info mt-2'>Agregar</button>
+                    <button
+                        onClick={handleAdd}
+                        className='btn btn-info mt-2'>Agregar
+                    </button>
           </div>
     </div>
     </>
