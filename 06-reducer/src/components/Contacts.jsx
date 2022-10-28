@@ -1,4 +1,4 @@
-import React, { useReducer,useEffect } from 'react'
+import React, { useReducer,useEffect, useState } from 'react'
 import { ContactsReducer } from '../reducers/ContactsReducer'
 import FormAdd from './FormAdd'
 import TableContacts from './TableContacts'
@@ -12,10 +12,16 @@ const init = () => {
         useEffect(() => {
             localStorage.setItem('contacts', JSON.stringify(state))
         }, [state])
-        
+        const [formView, setFormView] = useState(false);
+          
       return (
-      <div className='container mt-3'>
-              <FormAdd dispatch={ dispatch } />
+          <div className='container mt-3'>
+              <button
+                  onClick={() => setFormView(!formView)}
+                  className='btn btn-success mb-3'>{ formView ? ' - Cerrar' : '+Agregar Contacto'}</button>
+              {
+                formView && <FormAdd dispatch={dispatch} /> 
+              }
               <TableContacts contacts={state} dispatch={ dispatch } />
       </div>
   )
