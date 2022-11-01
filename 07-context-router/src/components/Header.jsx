@@ -1,7 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link,BrowserRouter as Router } from "react-router-dom";
 const Header = () => {
-  return (
+    return (
+      <Router>
       <header>
           <nav className='navbar navbar-expand-lg navbar-light bg-warning'>
               <div className='container-fluid'><h2 className='navbar-brand'>context app</h2>
@@ -19,20 +20,17 @@ const Header = () => {
                   <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                       <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
                           <li className="navbar-item">
-                              <Link to="/" className='nav-link active'>
-                                  home
-                              </Link>
+                              <Link to="/" className='nav-link active'>home</Link>
                           </li>
                           <li className="navbar-item">
-                              <Link to="/about" className='nav-link'>
-                                  About
-                              </Link>
+                              <Link to="/about" className='nav-link'>about</Link>
                           </li>
                       </ul>
                   </div>
               </div>
           </nav>
-    </header>
+        </header>
+        </Router>
   )
 }
 
