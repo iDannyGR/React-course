@@ -7,11 +7,18 @@ const Home = () => {
   const handleLogin = () => {
     setUser(userData);
   };
+  const handleLogout = () => {
+    setUser(null);
+  };
   return (
     <div>
       <h1> home screen</h1>
-      {user && <h2>{user.data.first_name}</h2>}
-      <button className='btn btn-primary' onClick={handleLogin}>login</button>
+      {
+        !user ?
+        <button className='btn btn-primary' onClick={handleLogin}>login</button>
+          :
+        <button className='btn btn-danger' onClick={handleLogout}>logout</button>  
+      }
     </div>
   );
 };

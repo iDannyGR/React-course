@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link,BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
-      <Router>
       <header>
           <nav className='navbar navbar-expand-lg navbar-light bg-warning'>
               <div className='container-fluid'><h2 className='navbar-brand'>context app</h2>
@@ -30,7 +30,6 @@ const Header = () => {
               </div>
           </nav>
         </header>
-        </Router>
   )
 }
 
