@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import LoginRouter from './routes/loginRouter';
 
 const App = () => {
   return (
-    <div>App</div>
+   <LoginRouter />
   )
 }
 
